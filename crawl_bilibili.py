@@ -26,7 +26,9 @@ def save_txt_file(barrage_list, file_name):
 			f.write('\n')
 
 if __name__ == '__main__':
-	url = 'https://api.bilibili.com/x/v1/dm/list.so?oid=104240398'
+	cid = input('输入视频的cid: ')
+	url = 'https://api.bilibili.com/x/v1/dm/list.so?oid={}'.format(cid)
 	barrage_list = crawl_barrage(url)
-	save_txt_file(barrage_list, '弹幕')
+	file_name = input('要保存的文件名: ')
+	save_txt_file(barrage_list, file_name)
 
