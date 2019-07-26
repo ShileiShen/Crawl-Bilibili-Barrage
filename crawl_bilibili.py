@@ -85,7 +85,7 @@ def create_word_cloud(text, wc_name):
     plt.show()
 
     # 保存词云
-    wc.generate('{}.jpg'.format(wc_name))
+    wc.to_file('{}.jpg'.format(wc_name))
 
 if __name__ == '__main__':
 	cid = input('输入视频的cid: ')
